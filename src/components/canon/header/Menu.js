@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, useCallback} from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
@@ -21,6 +21,12 @@ export class Menu extends Component {
         var aa = this.props.cc;
 
         console.log(aa);
+
+        var getUI = useCallback(()=>{
+            return () => {
+                return ;
+            }
+        }, []);
 
         return (
             <div className="Header">
